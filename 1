@@ -1,0 +1,6 @@
+app.post('/', (request, response) => {
+  let twiml = new twilio.twiml.VoiceResponse();
+  twiml.play({ digits: 'ww666ww666ww666' });
+  response.type('text/xml');
+  response.send(twiml.toString());
+});
